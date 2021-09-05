@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "d92b93ee-c700-4a0c-a822-54a56a61bcf3",
+		"name": "FilmesAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post filme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Titulo\": \"Star Wars\",\r\n    \"Diretor\": \"George Lucas\",\r\n    \"Genero\": \"Fantasia\",\r\n    \"Duracao\": 130\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post filme erroValidacao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Titulo\": \"\",\r\n    \"Diretor\": \"\",\r\n    \"Genero\": \"AventuraAventuraAventuraAventuraAventuraAventura\",\r\n    \"Duracao\": -30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get filmes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get filmesID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filme/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filme",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put filmeID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Titulo\": \"Star Wars - O retorno do Jedi\",\r\n    \"Diretor\": \"George Lucas\",\r\n    \"Genero\": \"Fantasia\",\r\n    \"Duracao\": 130\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filme/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filme",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete filmeID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filme/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filme",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
